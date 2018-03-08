@@ -8,7 +8,7 @@ import (
 //根据fastdfs文件名上传文件  ---> fileid  err
 
 func FDFSUploadByFilename(filename string) (groupName string, fileId string, err error) {
-	fdfsClient, err := fdfs_client.NewFdfsClient("/home/itcast/workspace/go/src/lovehouse/conf/client.conf")
+	fdfsClient, err := fdfs_client.NewFdfsClient("/home/itheima/workspace/go/src/lovehouse/conf/client.conf")
 	if err != nil {
 		fmt.Println("New FdfsClient error =  ", err)
 		return "", "", err
@@ -29,7 +29,7 @@ func FDFSUploadByFilename(filename string) (groupName string, fileId string, err
 //跟file的 buffer上传 ---> fileid  err
 func FDFSUploadByBuffer(buffer []byte, suffix string) (gourpName string, fileId string, err error) {
 
-	fdfsClient, err := fdfs_client.NewFdfsClient("/home/itcast/workspace/go/src/lovehouse/conf/client.conf")
+	fdfsClient, err := fdfs_client.NewFdfsClient("/home/itheima/workspace/go/src/lovehouse/conf/client.conf")
 	if err != nil {
 		fmt.Println("New FdfsClient error =  ", err)
 		return "", "", err

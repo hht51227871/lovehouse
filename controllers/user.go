@@ -72,7 +72,7 @@ func (this *UserController) UploadAvatar() {
 	}
 
 	//将fileid拼接成一个完整的url路径
-	avatar_url := "http://101.200.170.171:9977/" + fileId
+	avatar_url := "http://127.0.0.1:6379/" + fileId
 
 	//安装协议做出json返回给前端
 

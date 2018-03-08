@@ -22,4 +22,15 @@ func init() {
 	// api/v1.0/users [post]
 	beego.Router("/api/v1.0/users", &controllers.UserController{}, "post:Reg")
 
+	//更改用户名
+	beego.Router("api/v1.0/user/name", &controllers.ModifyUserNameController{}, "put:ModfileUserName")
+
+	//请求用户信息
+	beego.Router("api/v1.0/user", &controllers.ShowUserInfoController{}, "get:GetUserInfo")
+
+	//请求实名认证信息
+	beego.Router("api/v1.0/user/auth", &controllers.AuthController{}, "get:GetAuthInfo")
+
+	//更新实名认证信息
+	beego.Router("api/v1.0/user/auth", &controllers.AuthController{}, "post:SetAuthInfo")
 }
